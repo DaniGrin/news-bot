@@ -1,0 +1,34 @@
+name: news-bot
+
+on:
+  schedule:
+    - cron: "0 22 * * 1-5"      # 22:00 UTC Mon-Fri, after the US close in both EST and EDT
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: news-bot
+  cancel-in-progress: false
+
+jobs:
+  tick:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15          # 15 news fetches + a price download; fail fast if a feed hangs
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install dependencies
+        run: pip install yfinance pandas numpy
+      - name: Run the daily news tick (all three arms)
+        run: python news_paper.py --once
+      - name: Save state and the sentiment dataset back to the repo
+        run: |
+          git config user.name  "news-bot"
+          git config user.email "news-bot@users.noreply.github.com"
+          git add -A
+          git diff --staged --quiet || git commit -m "state: $(date -u +%FT%TZ)"
+          git push
