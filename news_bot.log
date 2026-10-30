@@ -1,0 +1,46 @@
+[2026-10-30 11:42:03] ====================================================================================================
+[2026-10-30 11:42:03] === NEWS BOT tick | 15 assets | K=3/side | risk 0.75%/leg | R=3.0xATR | rebal 10d ===
+[2026-10-30 11:42:05]   latest bar date: 2026-10-30   (15 assets priced)
+[2026-10-30 11:42:06]   news BTC-USD    score -0.47   pos  14  neg  39   headlines 57/60
+[2026-10-30 11:42:07]   news ETH-USD    score -0.62   pos   7  neg  30   headlines 54/60
+[2026-10-30 11:42:08]   news SOL-USD    score -0.40   pos   9  neg  21   headlines 53/60
+[2026-10-30 11:42:09]   news DOGE-USD   score +0.33   pos  10  neg   5   headlines 43/53
+[2026-10-30 11:42:10]   news SPY        score -0.31   pos  12  neg  23   headlines 52/60
+[2026-10-30 11:42:12]   news QQQ        score -0.86   pos   4  neg  54   headlines 44/47
+[2026-10-30 11:42:13]   news IWM        score -0.52   pos   5  neg  16   headlines 31/31
+[2026-10-30 11:42:14]   news SMH        score -0.17   pos  24  neg  34   headlines 42/45
+[2026-10-30 11:42:15]   news FXI        score -0.19   pos  22  neg  32   headlines 55/55
+[2026-10-30 11:42:16]   news EEM        score +0.27   pos   7  neg   4   headlines 28/31
+[2026-10-30 11:42:18]   news GLD        score -0.38   pos  14  neg  31   headlines 46/60
+[2026-10-30 11:42:19]   news SLV        score -0.52   pos  13  neg  41   headlines 48/60
+[2026-10-30 11:42:20]   news USO        score +0.03   pos  33  neg  31   headlines 51/60
+[2026-10-30 11:42:21]   news TLT        score +0.03   pos  15  neg  14   headlines 39/42
+[2026-10-30 11:42:22]   news UUP        score +0.10   pos  22  neg  18   headlines 44/49
+[2026-10-30 11:42:23]   [news ] LONG  DOGE-USD(+1.74), EEM(+1.56), UUP(+1.04)
+[2026-10-30 11:42:23]   [news ] SHORT IWM(-0.84), ETH-USD(-1.13), QQQ(-1.86)
+[2026-10-30 11:42:23]   [news ] ENTER DOGE-USD  LONG  @     0.0757  R   0.0106  qty  7088.7427  stop     0.0651
+[2026-10-30 11:42:23]   [news ] ENTER ETH-USD   SHORT @  2239.6001  R 261.6286  qty     0.2867  stop  2501.2287
+[2026-10-30 11:42:23]   [news ] ENTER EEM       LONG  @    62.7200  R   3.2084  qty    23.3763  stop    59.5116
+[2026-10-30 11:42:23]   [news ] ENTER IWM       SHORT @   284.0100  R  10.6803  qty     7.0223  stop   294.6903
+[2026-10-30 11:42:23]   [news ] ENTER UUP       LONG  @    29.0400  R   0.3458  qty   216.9010  stop    28.6942
+[2026-10-30 11:42:23]   [news ] ENTER QQQ       SHORT @   715.3400  R  33.7327  qty     2.2234  stop   749.0727
+[2026-10-30 11:42:23]   [news ] equity $10000.00 realized (+0.00%)  |  $10000.00 mark-to-market (+0.00%)  |  6 open
+[2026-10-30 11:42:23]   [mom  ] LONG  USO(+3.40), UUP(+0.45), SPY(+0.18)
+[2026-10-30 11:42:23]   [mom  ] SHORT ETH-USD(-0.65), FXI(-0.67), SLV(-1.28)
+[2026-10-30 11:42:23]   [mom  ] ENTER SPY       LONG  @   769.3600  R  20.5489  qty     3.6498  stop   748.8111
+[2026-10-30 11:42:23]   [mom  ] ENTER FXI       SHORT @    32.6900  R   1.1932  qty    62.8557  stop    33.8832
+[2026-10-30 11:42:23]   [mom  ] ENTER ETH-USD   SHORT @  2239.6001  R 261.6286  qty     0.2867  stop  2501.2287
+[2026-10-30 11:42:23]   [mom  ] ENTER SLV       SHORT @    47.2800  R   4.4821  qty    16.7332  stop    51.7621
+[2026-10-30 11:42:23]   [mom  ] ENTER UUP       LONG  @    29.0400  R   0.3458  qty   216.9010  stop    28.6942
+[2026-10-30 11:42:23]   [mom  ] ENTER USO       LONG  @   168.1900  R  15.1152  qty     4.9619  stop   153.0748
+[2026-10-30 11:42:23]   [mom  ] equity $10000.00 realized (+0.00%)  |  $10000.00 mark-to-market (+0.00%)  |  6 open
+[2026-10-30 11:42:23]   [blend] LONG  USO(+2.11), UUP(+0.74), EEM(+0.66)
+[2026-10-30 11:42:23]   [blend] SHORT QQQ(-0.85), ETH-USD(-0.89), SLV(-1.05)
+[2026-10-30 11:42:23]   [blend] ENTER ETH-USD   SHORT @  2239.6001  R 261.6286  qty     0.2867  stop  2501.2287
+[2026-10-30 11:42:23]   [blend] ENTER EEM       LONG  @    62.7200  R   3.2084  qty    23.3763  stop    59.5116
+[2026-10-30 11:42:23]   [blend] ENTER SLV       SHORT @    47.2800  R   4.4821  qty    16.7332  stop    51.7621
+[2026-10-30 11:42:23]   [blend] ENTER UUP       LONG  @    29.0400  R   0.3458  qty   216.9010  stop    28.6942
+[2026-10-30 11:42:23]   [blend] ENTER QQQ       SHORT @   715.3400  R  33.7327  qty     2.2234  stop   749.0727
+[2026-10-30 11:42:23]   [blend] ENTER USO       LONG  @   168.1900  R  15.1152  qty     4.9619  stop   153.0748
+[2026-10-30 11:42:23]   [blend] equity $10000.00 realized (+0.00%)  |  $10000.00 mark-to-market (+0.00%)  |  6 open
+[2026-10-30 11:42:23] === tick done ===
