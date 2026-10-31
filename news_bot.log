@@ -44,3 +44,28 @@
 [2026-10-30 11:42:23]   [blend] ENTER USO       LONG  @   168.1900  R  15.1152  qty     4.9619  stop   153.0748
 [2026-10-30 11:42:23]   [blend] equity $10000.00 realized (+0.00%)  |  $10000.00 mark-to-market (+0.00%)  |  6 open
 [2026-10-30 11:42:23] === tick done ===
+[2026-10-31 01:27:16] ====================================================================================================
+[2026-10-31 01:27:16] === NEWS BOT tick | 15 assets | K=3/side | risk 0.75%/leg | R=3.0xATR | rebal 10d ===
+[2026-10-31 01:27:19]   latest bar date: 2026-10-31   (15 assets priced)
+[2026-10-31 01:27:20]   news BTC-USD    score -0.58   pos  14  neg  53   headlines 56/60
+[2026-10-31 01:27:21]   news ETH-USD    score -0.55   pos   9  neg  31   headlines 50/60
+[2026-10-31 01:27:22]   news SOL-USD    score +0.11   pos  10  neg   8   headlines 52/60
+[2026-10-31 01:27:23]   news DOGE-USD   score -0.24   pos   8  neg  13   headlines 37/46
+[2026-10-31 01:27:25]   news SPY        score -0.59   pos   9  neg  35   headlines 58/60
+[2026-10-31 01:27:26]   news QQQ        score -0.86   pos   5  neg  64   headlines 58/60
+[2026-10-31 01:27:27]   news IWM        score +0.20   pos   6  neg   4   headlines 16/16
+[2026-10-31 01:27:28]   news SMH        score -0.68   pos   9  neg  48   headlines 51/57
+[2026-10-31 01:27:29]   news FXI        score -0.20   pos   8  neg  12   headlines 22/22
+[2026-10-31 01:27:31]   news EEM        score +0.26   pos  17  neg  10   headlines 54/58
+[2026-10-31 01:27:32]   news GLD        score -0.52   pos  13  neg  41   headlines 50/60
+[2026-10-31 01:27:33]   news SLV        score -0.74   pos   8  neg  54   headlines 46/60
+[2026-10-31 01:27:35]   news USO        score +0.00   pos  35  neg  35   headlines 52/60
+[2026-10-31 01:27:36]   news TLT        score +0.26   pos  27  neg  16   headlines 54/60
+[2026-10-31 01:27:37]   news UUP        score +0.20   pos  21  neg  14   headlines 40/46
+[2026-10-31 01:27:38]   [news ] holding 6 positions, next rebalance in 9 days
+[2026-10-31 01:27:38]   [news ] equity $10000.00 realized (+0.00%)  |  $10041.42 mark-to-market (+0.41%)  |  6 open
+[2026-10-31 01:27:38]   [mom  ] holding 6 positions, next rebalance in 9 days
+[2026-10-31 01:27:38]   [mom  ] equity $10000.00 realized (+0.00%)  |  $9964.60 mark-to-market (-0.35%)  |  6 open
+[2026-10-31 01:27:38]   [blend] holding 6 positions, next rebalance in 9 days
+[2026-10-31 01:27:38]   [blend] equity $10000.00 realized (+0.00%)  |  $10054.87 mark-to-market (+0.55%)  |  6 open
+[2026-10-31 01:27:38] === tick done ===
