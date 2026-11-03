@@ -69,3 +69,28 @@
 [2026-10-31 01:27:38]   [blend] holding 6 positions, next rebalance in 9 days
 [2026-10-31 01:27:38]   [blend] equity $10000.00 realized (+0.00%)  |  $10054.87 mark-to-market (+0.55%)  |  6 open
 [2026-10-31 01:27:38] === tick done ===
+[2026-11-03 03:21:06] ====================================================================================================
+[2026-11-03 03:21:06] === NEWS BOT tick | 15 assets | K=3/side | risk 0.75%/leg | R=3.0xATR | rebal 10d ===
+[2026-11-03 03:21:11]   latest bar date: 2026-11-03   (15 assets priced)
+[2026-11-03 03:21:18]   news BTC-USD    FAILED (HTTP Error 503: Service Unavailable) -> neutral
+[2026-11-03 03:21:27]   news ETH-USD    FAILED (HTTP Error 503: Service Unavailable) -> neutral
+[2026-11-03 03:21:36]   news SOL-USD    FAILED (HTTP Error 503: Service Unavailable) -> neutral
+[2026-11-03 03:21:44]   news DOGE-USD   FAILED (HTTP Error 503: Service Unavailable) -> neutral
+[2026-11-03 03:21:54]   news SPY        FAILED (HTTP Error 503: Service Unavailable) -> neutral
+[2026-11-03 03:22:01]   news QQQ        FAILED (HTTP Error 503: Service Unavailable) -> neutral
+[2026-11-03 03:22:10]   news IWM        FAILED (HTTP Error 503: Service Unavailable) -> neutral
+[2026-11-03 03:22:18]   news SMH        FAILED (HTTP Error 503: Service Unavailable) -> neutral
+[2026-11-03 03:22:26]   news FXI        FAILED (HTTP Error 503: Service Unavailable) -> neutral
+[2026-11-03 03:22:33]   news EEM        FAILED (HTTP Error 503: Service Unavailable) -> neutral
+[2026-11-03 03:22:40]   news GLD        FAILED (HTTP Error 503: Service Unavailable) -> neutral
+[2026-11-03 03:22:46]   news SLV        FAILED (HTTP Error 503: Service Unavailable) -> neutral
+[2026-11-03 03:22:54]   news USO        FAILED (HTTP Error 503: Service Unavailable) -> neutral
+[2026-11-03 03:23:05]   news TLT        FAILED (HTTP Error 503: Service Unavailable) -> neutral
+[2026-11-03 03:23:16]   news UUP        FAILED (HTTP Error 503: Service Unavailable) -> neutral
+[2026-11-03 03:23:16]   [news ] holding 6 positions, next rebalance in 8 days
+[2026-11-03 03:23:16]   [news ] equity $10000.00 realized (+0.00%)  |  $10040.58 mark-to-market (+0.41%)  |  6 open
+[2026-11-03 03:23:16]   [mom  ] holding 6 positions, next rebalance in 8 days
+[2026-11-03 03:23:16]   [mom  ] equity $10000.00 realized (+0.00%)  |  $9855.98 mark-to-market (-1.44%)  |  6 open
+[2026-11-03 03:23:16]   [blend] holding 6 positions, next rebalance in 8 days
+[2026-11-03 03:23:16]   [blend] equity $10000.00 realized (+0.00%)  |  $9990.17 mark-to-market (-0.10%)  |  6 open
+[2026-11-03 03:23:16] === tick done ===
