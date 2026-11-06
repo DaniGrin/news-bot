@@ -144,3 +144,31 @@
 [2026-11-05 02:02:35]   [blend] holding 6 positions, next rebalance in 6 days
 [2026-11-05 02:02:35]   [blend] equity $10000.00 realized (+0.00%)  |  $9959.85 mark-to-market (-0.40%)  |  6 open
 [2026-11-05 02:02:35] === tick done ===
+[2026-11-06 02:02:04] ====================================================================================================
+[2026-11-06 02:02:04] === NEWS BOT tick | 15 assets | K=3/side | risk 0.75%/leg | R=3.0xATR | rebal 10d ===
+[2026-11-06 02:02:07]   latest bar date: 2026-11-06   (15 assets priced)
+[2026-11-06 02:02:07]   news BTC-USD    score -0.47   pos  13  neg  36   headlines 52/60
+[2026-11-06 02:02:08]   news ETH-USD    score +0.28   pos  16  neg   9   headlines 56/60
+[2026-11-06 02:02:10]   news SOL-USD    score -0.04   pos  11  neg  12   headlines 50/60
+[2026-11-06 02:02:11]   news DOGE-USD   score +0.33   pos   6  neg   3   headlines  8/12
+[2026-11-06 02:02:12]   news SPY        score -0.61   pos  14  neg  58   headlines 58/60
+[2026-11-06 02:02:13]   news QQQ        score -0.85   pos   7  neg  86   headlines 58/60
+[2026-11-06 02:02:14]   news IWM        score +0.60   pos   4  neg   1   headlines 13/13
+[2026-11-06 02:02:15]   news SMH        score -0.77   pos   9  neg  70   headlines 57/60
+[2026-11-06 02:02:16]   news FXI        score +0.00   pos   5  neg   5   headlines 22/24
+[2026-11-06 02:02:17]   news EEM        score +1.00   pos   9  neg   0   headlines 26/26
+[2026-11-06 02:02:19]   news GLD        score +0.37   pos  26  neg  12   headlines 51/60
+[2026-11-06 02:02:20]   news SLV        score +0.23   pos  27  neg  17   headlines 51/60
+[2026-11-06 02:02:21]   news USO        score -0.20   pos  28  neg  42   headlines 54/60
+[2026-11-06 02:02:22]   news TLT        score +0.00   pos  12  neg  12   headlines 35/36
+[2026-11-06 02:02:24]   news UUP        score -0.02   pos  22  neg  23   headlines 53/56
+[2026-11-06 02:02:24]   [news ] holding 6 positions, next rebalance in 5 days
+[2026-11-06 02:02:24]   [news ] equity $10000.00 realized (+0.00%)  |  $9970.32 mark-to-market (-0.30%)  |  6 open
+[2026-11-06 02:02:24]   [mom  ] EXIT  FXI       SHORT @    33.8832  stop      PnL    -77.05  equity   9922.95  (WR 0/1)
+[2026-11-06 02:02:24]   [mom  ] EXIT  USO       LONG  @   153.0748  stop      PnL    -75.83  equity   9847.11  (WR 0/2)
+[2026-11-06 02:02:24]   [mom  ] holding 4 positions, next rebalance in 5 days
+[2026-11-06 02:02:24]   [mom  ] equity $9847.11 realized (-1.53%)  |  $9809.57 mark-to-market (-1.90%)  |  4 open
+[2026-11-06 02:02:24]   [blend] EXIT  USO       LONG  @   153.0748  stop      PnL    -75.83  equity   9924.17  (WR 0/1)
+[2026-11-06 02:02:24]   [blend] holding 5 positions, next rebalance in 5 days
+[2026-11-06 02:02:24]   [blend] equity $9924.17 realized (-0.76%)  |  $9922.22 mark-to-market (-0.78%)  |  5 open
+[2026-11-06 02:02:24] === tick done ===
