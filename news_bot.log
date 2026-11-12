@@ -250,3 +250,28 @@
 [2026-11-11 01:45:46]   [blend] holding 4 positions, next rebalance in 2 days
 [2026-11-11 01:45:46]   [blend] equity $9847.70 realized (-1.52%)  |  $10026.87 mark-to-market (+0.27%)  |  4 open
 [2026-11-11 01:45:46] === tick done ===
+[2026-11-12 02:44:47] ====================================================================================================
+[2026-11-12 02:44:47] === NEWS BOT tick | 15 assets | K=3/side | risk 0.75%/leg | R=3.0xATR | rebal 10d ===
+[2026-11-12 02:44:49]   latest bar date: 2026-11-12   (15 assets priced)
+[2026-11-12 02:44:50]   news BTC-USD    score +0.03   pos  15  neg  14   headlines 49/60
+[2026-11-12 02:44:51]   news ETH-USD    score -0.60   pos   4  neg  16   headlines 47/58
+[2026-11-12 02:44:52]   news SOL-USD    score -0.25   pos   9  neg  15   headlines 48/60
+[2026-11-12 02:44:53]   news DOGE-USD   score -0.80   pos   1  neg   9   headlines 21/35
+[2026-11-12 02:44:54]   news SPY        score +0.12   pos  29  neg  23   headlines 52/60
+[2026-11-12 02:44:56]   news QQQ        score +0.46   pos  49  neg  18   headlines 57/60
+[2026-11-12 02:44:57]   news IWM        score +0.43   pos  10  neg   4   headlines 22/24
+[2026-11-12 02:44:58]   news SMH        score +0.68   pos  52  neg  10   headlines 55/56
+[2026-11-12 02:44:59]   news FXI        score +0.45   pos   8  neg   3   headlines 19/20
+[2026-11-12 02:45:00]   news EEM        score +0.11   pos  10  neg   8   headlines 27/27
+[2026-11-12 02:45:01]   news GLD        score -0.04   pos  26  neg  28   headlines 54/60
+[2026-11-12 02:45:03]   news SLV        score -0.20   pos  20  neg  30   headlines 51/60
+[2026-11-12 02:45:04]   news USO        score +0.26   pos  36  neg  21   headlines 54/60
+[2026-11-12 02:45:05]   news TLT        score +0.16   pos  29  neg  21   headlines 45/51
+[2026-11-12 02:45:06]   news UUP        score +0.38   pos  36  neg  16   headlines 51/60
+[2026-11-12 02:45:07]   [news ] holding 5 positions, next rebalance in 11 days
+[2026-11-12 02:45:07]   [news ] equity $9923.53 realized (-0.76%)  |  $10047.68 mark-to-market (+0.48%)  |  5 open
+[2026-11-12 02:45:07]   [mom  ] holding 3 positions, next rebalance in 11 days
+[2026-11-12 02:45:07]   [mom  ] equity $9769.30 realized (-2.31%)  |  $9899.67 mark-to-market (-1.00%)  |  3 open
+[2026-11-12 02:45:07]   [blend] holding 4 positions, next rebalance in 11 days
+[2026-11-12 02:45:07]   [blend] equity $9847.70 realized (-1.52%)  |  $10033.56 mark-to-market (+0.34%)  |  4 open
+[2026-11-12 02:45:07] === tick done ===
