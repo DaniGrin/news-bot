@@ -446,3 +446,31 @@
 [2026-11-20 02:53:29]   [blend] holding 6 positions, next rebalance in 5 days
 [2026-11-20 02:53:29]   [blend] equity $9911.35 realized (-0.89%)  |  $10220.25 mark-to-market (+2.20%)  |  6 open
 [2026-11-20 02:53:29] === tick done ===
+[2026-11-21 03:00:10] ====================================================================================================
+[2026-11-21 03:00:10] === NEWS BOT tick | 15 assets | K=3/side | risk 0.75%/leg | R=3.0xATR | rebal 10d ===
+[2026-11-21 03:00:12]   latest bar date: 2026-11-21   (15 assets priced)
+[2026-11-21 03:00:13]   news BTC-USD    score -0.26   pos  13  neg  22   headlines 43/48
+[2026-11-21 03:00:14]   news ETH-USD    score -0.72   pos   5  neg  31   headlines 46/60
+[2026-11-21 03:00:15]   news SOL-USD    score -0.19   pos  11  neg  16   headlines 57/60
+[2026-11-21 03:00:16]   news DOGE-USD   score -0.50   pos   2  neg   6   headlines 13/16
+[2026-11-21 03:00:17]   news SPY        score -0.74   pos  10  neg  68   headlines 50/60
+[2026-11-21 03:00:19]   news QQQ        score -0.75   pos  10  neg  71   headlines 58/60
+[2026-11-21 03:00:20]   news IWM        score +0.00   pos   9  neg   9   headlines 34/36
+[2026-11-21 03:00:21]   news SMH        score -0.32   pos  14  neg  27   headlines 35/39
+[2026-11-21 03:00:22]   news FXI        score -0.20   pos   8  neg  12   headlines 26/27
+[2026-11-21 03:00:23]   news EEM        score -0.44   pos   7  neg  18   headlines 24/24
+[2026-11-21 03:00:24]   news GLD        score -0.64   pos   9  neg  41   headlines 48/60
+[2026-11-21 03:00:26]   news SLV        score -0.55   pos  13  neg  45   headlines 47/60
+[2026-11-21 03:00:27]   news USO        score -0.18   pos  20  neg  29   headlines 52/60
+[2026-11-21 03:00:28]   news TLT        score -0.25   pos  18  neg  30   headlines 55/60
+[2026-11-21 03:00:29]   news UUP        score +0.41   pos  48  neg  20   headlines 49/56
+[2026-11-21 03:00:30]   [news ] EXIT  SMH       LONG  @   435.6179  stop      PnL    -75.37  equity   9903.58  (WR 3/6)
+[2026-11-21 03:00:30]   [news ] EXIT  QQQ       LONG  @   641.1669  stop      PnL    -75.89  equity   9827.69  (WR 3/7)
+[2026-11-21 03:00:30]   [news ] holding 4 positions, next rebalance in 4 days
+[2026-11-21 03:00:30]   [news ] equity $9827.69 realized (-1.72%)  |  $10333.78 mark-to-market (+3.34%)  |  4 open
+[2026-11-21 03:00:30]   [mom  ] holding 6 positions, next rebalance in 4 days
+[2026-11-21 03:00:30]   [mom  ] equity $9769.30 realized (-2.31%)  |  $10344.28 mark-to-market (+3.44%)  |  6 open
+[2026-11-21 03:00:30]   [blend] EXIT  QQQ       LONG  @   641.1669  stop      PnL    -75.38  equity   9835.98  (WR 2/5)
+[2026-11-21 03:00:30]   [blend] holding 5 positions, next rebalance in 4 days
+[2026-11-21 03:00:30]   [blend] equity $9835.98 realized (-1.64%)  |  $10299.93 mark-to-market (+3.00%)  |  5 open
+[2026-11-21 03:00:30] === tick done ===
