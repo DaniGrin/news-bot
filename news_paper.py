@@ -31,7 +31,7 @@ EXITS - the step-trail, the one mechanism we validated on daily bars:
   python news_paper.py --once                 # one daily tick (what GitHub Actions runs)
   python news_paper.py --dry                  # fetch + score + rank, trade nothing
 """
-import os, sys, re, json, math, time, html, argparse, traceback
+import os, sys, re, json, math, time, html, argparse, traceback, datetime
 import urllib.request, urllib.parse
 import numpy as np, pandas as pd, yfinance as yf
 
@@ -183,6 +183,19 @@ def atr(h, l, c, n=14):
     return tr.ewm(alpha=1.0 / n, adjust=False).mean()
 
 
+def closed_only(sub, tkr, now=None):
+    """Drop the daily bar that is still forming. A crypto day ends at 00:00 UTC; the US session
+    is over by 21:00 UTC in both winter and summer time."""
+    if now is None:
+        now = datetime.datetime.now(datetime.timezone.utc).replace(tzinfo=None)
+    end = (pd.Timedelta(hours=24, minutes=5) if tkr.endswith("-USD")
+           else pd.Timedelta(hours=21, minutes=15))
+    idx = pd.DatetimeIndex(sub.index)
+    if idx.tz is not None:
+        idx = idx.tz_localize(None)
+    return sub[(idx.normalize() + end) <= pd.Timestamp(now)]
+
+
 def gather_prices(tickers):
     d = yf.download(" ".join(tickers), period="1y", interval="1d",
                     progress=False, auto_adjust=True, group_by="ticker", threads=False)
@@ -191,13 +204,13 @@ def gather_prices(tickers):
         try:
             sub = d[t] if isinstance(d.columns, pd.MultiIndex) else d
             sub = sub.rename(columns=str.lower)[["high", "low", "close"]].dropna()
+            sub = closed_only(sub, t)
             if len(sub) < 70:
                 log("  price %-9s only %d bars - skipped" % (t, len(sub)))
                 continue
             out[t] = {"close": float(sub.close.iloc[-1]),
                       "atr": float(atr(sub.high, sub.low, sub.close).iloc[-1]),
-                      "high": float(sub.high.iloc[-1]),
-                      "low": float(sub.low.iloc[-1]),
+                      "bars": sub,
                       "mom": float(np.log(sub.close.iloc[-1] / sub.close.iloc[-61])),
                       "date": str(sub.index[-1].date())}
         except Exception as e:
@@ -234,32 +247,50 @@ def close_pos(s, tkr, px, reason, arm):
            s["equity"], s["wins"], s["trades"]))
 
 
-def open_pos(s, tkr, side, px, R, risk, arm):
+def open_pos(s, tkr, side, px, R, risk, arm, bar_date):
     qty = (s["equity"] * risk) / R
     s["pos"][tkr] = {"side": side, "entry": px, "R": R, "qty": qty, "peak": 0.0,
-                     "stop": px - side * R, "opened": time.strftime("%Y-%m-%d")}
+                     "stop": px - side * R, "opened": time.strftime("%Y-%m-%d"),
+                     "checked": bar_date}          # entry is this bar's close: stops start on the next one
     log("  [%-5s] ENTER %-9s %-5s @ %10.4f  R %8.4f  qty %10.4f  stop %10.4f"
         % (arm, tkr, "LONG" if side == 1 else "SHORT", px, R, qty, px - side * R))
 
 
-def manage_stops(s, prices, arm):
-    """Step-trail: 1R stop -> breakeven at +2R -> every further +1R lifts the stop 1R."""
+def manage_stops(s, prices, arm, done):
+    """Step-trail: 1R stop -> breakeven at +2R -> every further +1R lifts the stop 1R.
+    Walks EVERY closed daily bar not yet checked for each position (weekends and skipped runs included)."""
     for tkr in list(s["pos"].keys()):
         if tkr not in prices:
             continue
-        p, q = s["pos"][tkr], prices[tkr]
-        if p["side"] == 1:
-            if q["low"] <= p["stop"]:
-                close_pos(s, tkr, p["stop"], "stop", arm)
+        p = s["pos"][tkr]
+        p.setdefault("checked", max(done, p["opened"]))
+        for ts, q in prices[tkr]["bars"].iterrows():
+            day = str(ts.date())
+            if day <= p["checked"]:
                 continue
-            p["peak"] = max(p["peak"], (q["high"] - p["entry"]) / p["R"])
-        else:
-            if q["high"] >= p["stop"]:
-                close_pos(s, tkr, p["stop"], "stop", arm)
-                continue
-            p["peak"] = max(p["peak"], (p["entry"] - q["low"]) / p["R"])
-        lvl = math.floor(p["peak"] - 2.0) if p["peak"] >= 2.0 else -1.0
-        p["stop"] = p["entry"] + p["side"] * lvl * p["R"]
+            p["checked"] = day
+            if p["side"] == 1:
+                if q.low <= p["stop"]:
+                    close_pos(s, tkr, p["stop"], "stop", arm)
+                    break
+                p["peak"] = max(p["peak"], (float(q.high) - p["entry"]) / p["R"])
+            else:
+                if q.high >= p["stop"]:
+                    close_pos(s, tkr, p["stop"], "stop", arm)
+                    break
+                p["peak"] = max(p["peak"], (p["entry"] - float(q.low)) / p["R"])
+            lvl = math.floor(p["peak"] - 2.0) if p["peak"] >= 2.0 else -1.0
+            p["stop"] = p["entry"] + p["side"] * lvl * p["R"]
+
+
+def processed_through(s):
+    """Newest day already handled. Accounts written before the closed-bar fix stored the date of a
+    still-forming crypto bar in last_day, so for them only the day before it is truly done."""
+    if s.get("closed_day"):
+        return s["closed_day"]
+    if not s["last_day"]:
+        return ""
+    return str(datetime.date.fromisoformat(s["last_day"]) - datetime.timedelta(days=1))
 
 
 def rebalance(s, ranks, prices, a, arm):
@@ -282,7 +313,8 @@ def rebalance(s, ranks, prices, a, arm):
         R = a.atr_mult * prices[tkr]["atr"]
         if R <= 0:
             continue
-        open_pos(s, tkr, 1 if tkr in longs else -1, prices[tkr]["close"], R, a.risk, arm)
+        open_pos(s, tkr, 1 if tkr in longs else -1, prices[tkr]["close"], R, a.risk, arm,
+                 prices[tkr]["date"])
 
 
 def mark_to_market(s, prices):
@@ -340,7 +372,7 @@ def main():
         log("no prices - aborting tick, nothing changed")
         return
     day = max(q["date"] for q in prices.values())
-    log("  latest bar date: %s   (%d assets priced)" % (day, len(prices)))
+    log("  latest CLOSED bar date: %s   (%d assets priced)" % (day, len(prices)))
 
     news = gather_news([t for t in tickers if t in prices])
     news_z = zscore({t: news[t]["score"] for t in news})
@@ -355,12 +387,15 @@ def main():
                 % (arm, ", ".join(o[:a.k]), ", ".join(o[-a.k:])))
         return
 
+    processed = False
     for arm in ARMS:
         s = load_state(arm, a.capital)
-        if s["last_day"] == day:
+        done = processed_through(s)
+        if day <= done:
             log("  [%-5s] %s already processed - skipping" % (arm, day))
             continue
-        manage_stops(s, prices, arm)
+        processed = True
+        manage_stops(s, prices, arm, done)
         s["day_count"] += 1
         due = (not s["pos"]) or (s["day_count"] % a.rebal == 1)
         if due:
@@ -369,13 +404,15 @@ def main():
             log("  [%-5s] holding %d positions, next rebalance in %d days"
                 % (arm, len(s["pos"]), a.rebal - (s["day_count"] % a.rebal) + 1))
         s["last_day"] = day
+        s["closed_day"] = day
         save_state(arm, s)
         mtm = mark_to_market(s, prices)
         log("  [%-5s] equity $%.2f realized (%+.2f%%)  |  $%.2f mark-to-market (%+.2f%%)  |  %d open"
             % (arm, s["equity"], (s["equity"] / a.capital - 1) * 100,
                mtm, (mtm / a.capital - 1) * 100, len(s["pos"])))
 
-    append_history(day, news, prices, ranks)
+    if processed:                       # a repeat run on the same day must not duplicate dataset rows
+        append_history(day, news, prices, ranks)
     log("=== tick done ===")
 
 

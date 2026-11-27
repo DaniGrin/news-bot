@@ -101,3 +101,9 @@ python news_paper.py --dry      # score + rank only, trade nothing
 python news_paper.py --once     # one daily tick
 python news_paper.py --reset    # wipe all three accounts back to $10,000
 ```
+
+## Fix log
+
+**2026-11-27: closed bars only, and all of them.** Crypto stops were checked on a partial daily bar, and only on the newest bar, so weekend and late-day moves could be missed. Every closed daily bar is now walked, per position. `news_history.csv` closes are closed-bar closes from this date.
+
+Trading rules are unchanged. Results recorded **before** this date were produced with the defect and have not been rewritten; treat 2026-11-27 as the start of the clean data.
