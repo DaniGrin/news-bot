@@ -588,3 +588,25 @@
 [2026-11-27 03:58:30]   [blend] ENTER SLV       SHORT @    37.1000  R   5.5498  qty    13.3605  stop    42.6498
 [2026-11-27 03:58:30]   [blend] equity $9886.50 realized (-1.13%)  |  $10211.56 mark-to-market (+2.12%)  |  6 open
 [2026-11-27 03:58:30] === tick done ===
+[2026-11-27 09:59:12] ====================================================================================================
+[2026-11-27 09:59:12] === NEWS BOT tick | 15 assets | K=3/side | risk 0.75%/leg | R=3.0xATR | rebal 10d ===
+[2026-11-27 09:59:14]   latest CLOSED bar date: 2026-11-26   (15 assets priced)
+[2026-11-27 09:59:19]   news BTC-USD    FAILED (HTTP Error 503: Service Unavailable) -> neutral
+[2026-11-27 09:59:28]   news ETH-USD    FAILED (HTTP Error 503: Service Unavailable) -> neutral
+[2026-11-27 09:59:39]   news SOL-USD    FAILED (HTTP Error 503: Service Unavailable) -> neutral
+[2026-11-27 09:59:44]   news DOGE-USD   FAILED (HTTP Error 503: Service Unavailable) -> neutral
+[2026-11-27 09:59:55]   news SPY        FAILED (HTTP Error 503: Service Unavailable) -> neutral
+[2026-11-27 10:00:03]   news QQQ        FAILED (HTTP Error 503: Service Unavailable) -> neutral
+[2026-11-27 10:00:12]   news IWM        FAILED (HTTP Error 503: Service Unavailable) -> neutral
+[2026-11-27 10:00:22]   news SMH        FAILED (HTTP Error 503: Service Unavailable) -> neutral
+[2026-11-27 10:00:30]   news FXI        FAILED (HTTP Error 503: Service Unavailable) -> neutral
+[2026-11-27 10:00:37]   news EEM        FAILED (HTTP Error 503: Service Unavailable) -> neutral
+[2026-11-27 10:00:44]   news GLD        FAILED (HTTP Error 503: Service Unavailable) -> neutral
+[2026-11-27 10:00:54]   news SLV        FAILED (HTTP Error 503: Service Unavailable) -> neutral
+[2026-11-27 10:01:00]   news USO        FAILED (HTTP Error 503: Service Unavailable) -> neutral
+[2026-11-27 10:01:07]   news TLT        FAILED (HTTP Error 503: Service Unavailable) -> neutral
+[2026-11-27 10:01:16]   news UUP        FAILED (HTTP Error 503: Service Unavailable) -> neutral
+[2026-11-27 10:01:17]   [news ] 2026-11-26 already processed - skipping
+[2026-11-27 10:01:17]   [mom  ] 2026-11-26 already processed - skipping
+[2026-11-27 10:01:17]   [blend] 2026-11-26 already processed - skipping
+[2026-11-27 10:01:17] === tick done ===
