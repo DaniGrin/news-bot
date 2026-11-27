@@ -549,3 +549,42 @@
 [2026-11-26 03:59:34]   [blend] holding 5 positions, next rebalance in 11 days
 [2026-11-26 03:59:34]   [blend] equity $9835.98 realized (-1.64%)  |  $10237.59 mark-to-market (+2.38%)  |  5 open
 [2026-11-26 03:59:34] === tick done ===
+[2026-11-27 03:58:08] ====================================================================================================
+[2026-11-27 03:58:08] === NEWS BOT tick | 15 assets | K=3/side | risk 0.75%/leg | R=3.0xATR | rebal 10d ===
+[2026-11-27 03:58:10]   latest bar date: 2026-11-27   (15 assets priced)
+[2026-11-27 03:58:11]   news BTC-USD    score +0.00   pos  15  neg  15   headlines 56/60
+[2026-11-27 03:58:12]   news ETH-USD    score -0.28   pos   9  neg  16   headlines 44/56
+[2026-11-27 03:58:14]   news SOL-USD    score +0.33   pos  22  neg  11   headlines 55/60
+[2026-11-27 03:58:15]   news DOGE-USD   score -0.29   pos   5  neg   9   headlines 47/60
+[2026-11-27 03:58:16]   news SPY        score -0.26   pos  13  neg  22   headlines 51/60
+[2026-11-27 03:58:18]   news QQQ        score -0.59   pos  15  neg  59   headlines 57/60
+[2026-11-27 03:58:19]   news IWM        score +0.56   pos   7  neg   2   headlines 15/16
+[2026-11-27 03:58:20]   news SMH        score -0.09   pos  30  neg  36   headlines 53/54
+[2026-11-27 03:58:21]   news FXI        score -0.60   pos  13  neg  52   headlines 49/50
+[2026-11-27 03:58:22]   news EEM        score -0.15   pos  14  neg  19   headlines 56/60
+[2026-11-27 03:58:24]   news GLD        score -0.27   pos  15  neg  26   headlines 51/60
+[2026-11-27 03:58:25]   news SLV        score -0.22   pos  18  neg  28   headlines 45/60
+[2026-11-27 03:58:26]   news USO        score +0.09   pos  25  neg  21   headlines 52/60
+[2026-11-27 03:58:28]   news TLT        score -0.23   pos  27  neg  43   headlines 59/60
+[2026-11-27 03:58:29]   news UUP        score +0.10   pos  32  neg  26   headlines 53/59
+[2026-11-27 03:58:30]   [news ] LONG  IWM(+2.28), SOL-USD(+1.54), UUP(+0.77)
+[2026-11-27 03:58:30]   [news ] SHORT DOGE-USD(-0.53), QQQ(-1.57), FXI(-1.58)
+[2026-11-27 03:58:30]   [news ] EXIT  SPY       SHORT @   716.7000  rotated   PnL    +95.52  equity   9923.21  (WR 4/8)
+[2026-11-27 03:58:30]   [news ] EXIT  BTC-USD   SHORT @ 61339.5898  rotated   PnL    +99.08  equity  10022.29  (WR 5/9)
+[2026-11-27 03:58:30]   [news ] ENTER QQQ       SHORT @   633.9300  R  64.6222  qty     1.1632  stop   698.5521
+[2026-11-27 03:58:30]   [news ] ENTER IWM       LONG  @   268.8700  R  17.6082  qty     4.2689  stop   251.2618
+[2026-11-27 03:58:30]   [news ] ENTER SOL-USD   LONG  @    72.5900  R  13.3369  qty     5.6360  stop    59.2531
+[2026-11-27 03:58:30]   [news ] ENTER FXI       SHORT @    31.3000  R   1.5366  qty    48.9179  stop    32.8366
+[2026-11-27 03:58:30]   [news ] equity $10022.29 realized (+0.22%)  |  $10207.55 mark-to-market (+2.08%)  |  6 open
+[2026-11-27 03:58:30]   [mom  ] LONG  UUP(+1.38), TLT(+1.19), USO(+1.08)
+[2026-11-27 03:58:30]   [mom  ] SHORT SLV(-1.24), SOL-USD(-1.63), DOGE-USD(-1.64)
+[2026-11-27 03:58:30]   [mom  ] EXIT  ETH-USD   SHORT @  1726.0000  rotated   PnL   +146.59  equity   9915.89  (WR 1/4)
+[2026-11-27 03:58:30]   [mom  ] ENTER SOL-USD   SHORT @    72.5900  R  13.3369  qty     5.5762  stop    85.9269
+[2026-11-27 03:58:30]   [mom  ] equity $9915.89 realized (-0.84%)  |  $10304.65 mark-to-market (+3.05%)  |  6 open
+[2026-11-27 03:58:30]   [blend] LONG  IWM(+1.50), UUP(+1.07), USO(+0.90)
+[2026-11-27 03:58:30]   [blend] SHORT SLV(-0.77), ETH-USD(-0.87), DOGE-USD(-1.09)
+[2026-11-27 03:58:30]   [blend] EXIT  SOL-USD   SHORT @    72.5900  rotated   PnL    +50.53  equity   9886.50  (WR 3/6)
+[2026-11-27 03:58:30]   [blend] ENTER IWM       LONG  @   268.8700  R  17.6082  qty     4.2110  stop   251.2618
+[2026-11-27 03:58:30]   [blend] ENTER SLV       SHORT @    37.1000  R   5.5498  qty    13.3605  stop    42.6498
+[2026-11-27 03:58:30]   [blend] equity $9886.50 realized (-1.13%)  |  $10211.56 mark-to-market (+2.12%)  |  6 open
+[2026-11-27 03:58:30] === tick done ===
